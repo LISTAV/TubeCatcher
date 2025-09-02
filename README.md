@@ -1,6 +1,6 @@
 # TubeCatcher
 
-![TubeCatcher Logo](/logo.png)
+![TubeCatcher Logo](/favicon.ico)
 
 TubeCatcher is a user-friendly graphical user interface (GUI) for downloading videos and audio from YouTube and other supported platforms using the powerful `yt-dlp` library. Built with Python and Tkinter, TubeCatcher allows users to fetch available formats, select video or audio quality, and download content with options for subtitles and thumbnails. It simplifies the process of downloading media for users who prefer a GUI over command-line tools.
 
