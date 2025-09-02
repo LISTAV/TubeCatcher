@@ -49,6 +49,14 @@ For Windows users, the provided `Run.bat` script automates the installation of d
 3. **Verify Installation**:
    - If prompted, allow the script to download and install dependencies.
    - The GUI should launch automatically after setup.
+  
+##Why Not an Executable (.exe)?
+TubeCatcher is distributed as a Python script (ytdlp5.py) with a Run.bat script for Windows, rather than a standalone executable (.exe). This design choice was made for the following reasons:
+- Ease of Updating Dependencies: TubeCatcher relies on yt-dlp and FFmpeg, which are frequently updated to support new websites, fix bugs, and adapt to changes in platform APIs (e.g., YouTube). Bundling these dependencies into an .exe file using tools like PyInstaller would make it difficult for users to update yt-dlp and FFmpeg independently. By keeping the application as a Python script, users can easily update yt-dlp with pip install --upgrade yt-dlp or reinstall FFmpeg to ensure compatibility with the latest platforms.
+- Flexibility and Transparency: A Python script allows users to inspect and modify the code if needed, fostering transparency and customization. An .exe file would obscure the code and make it harder for users to troubleshoot or extend functionality. 
+- Smaller Distribution Size: An .exe file bundling Python, yt-dlp, FFmpeg, and Tkinter can be significantly larger (hundreds of MBs) compared to the lightweight Python script and Run.bat. Users with Python and FFmpeg installed can run TubeCatcher with minimal additional setup.
+- Cross-Platform Compatibility: Distributing as a Python script ensures compatibility across Windows, macOS, and Linux without requiring separate executables for each platform. The Run.bat script simplifies setup for Windows users while maintaining flexibility for others.
+- For convenience, the Run.bat script automates dependency installation and launching on Windows, providing a near-executable experience without the drawbacks of a static .exe file. Users can still update yt-dlp and FFmpeg as needed to maintain functionality.
 
 ### Manual Installation (Windows, macOS, Linux)
 If you prefer manual setup or are using macOS/Linux, follow these steps:
