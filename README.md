@@ -1,56 +1,142 @@
-TubeCatcher - A Simple YouTube Downloader GUI
+# TubeCatcher
 
-TubeCatcher is a user-friendly, cross-platform desktop application for downloading videos and audio from YouTube and other video sites. It uses the powerful yt-dlp backend, providing a graphical interface to manage your downloads.
-Features
+![TubeCatcher Logo](/logo.png)
 
-    Download Videos & Audio: Easily download videos in your desired quality or extract just the audio.
+TubeCatcher is a user-friendly graphical user interface (GUI) for downloading videos and audio from YouTube and other supported platforms using the powerful `yt-dlp` library. Built with Python and Tkinter, TubeCatcher allows users to fetch available formats, select video or audio quality, and download content with options for subtitles and thumbnails. It simplifies the process of downloading media for users who prefer a GUI over command-line tools.
 
-    Format Selection: Fetch all available formats for a given URL and choose the one you want.
+## Support the Project
+If you find TubeCatcher useful, please consider supporting the developer by buying a coffee! Your support helps keep this project alive and funds future improvements.
 
-    Progress Bar: Monitor the download progress in real-time.
+[![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-Donate-orange?logo=buymeacoffee)](https://buymeacoffee.com/xuvidhah)
 
-    Output Folder: Select a custom location to save your downloaded files.
+## Features
+- **Fetch Available Formats**: Retrieve and display all available video and audio formats for a given URL.
+- **Video and Audio Downloads**: Download videos with audio or audio-only files, with automatic merging of video and audio streams when needed.
+- **Format Selection**: Choose from a list of formats, including a "Best Video + Audio" option for optimal quality.
+- **Subtitles and Thumbnails**: Option to include subtitles and embed thumbnails in downloaded files.
+- **Progress Tracking**: Real-time progress bar and console output to monitor download status.
+- **Custom Output Folder**: Select a custom directory for saving downloaded files.
+- **Cross-Platform**: Works on Windows, macOS, and Linux (with proper dependencies installed).
+- **Windows Convenience**: Includes a `Run.bat` script for Windows users to automatically install dependencies and launch the application.
 
-    Additional Options: Download subtitles and video thumbnails.
+## Requirements
+- **Python 3.6+**: Ensure Python is installed on your system.
+- **yt-dlp**: The core library for downloading media.
+- **FFmpeg**: Required for merging video and audio streams and embedding subtitles/thumbnails.
+- **Tkinter**: Usually included with Python, used for the GUI.
 
-    Dependency Management: The Run.bat script automatically checks for and installs required dependencies like Python and FFmpeg on Windows, making it easy to get started.
+## Installation
+### Windows (Using Run.bat)
+For Windows users, the provided `Run.bat` script automates the installation of dependencies (Python, FFmpeg, and yt-dlp) and launches the application. Follow these steps:
 
-How to Use
+1. **Clone or Download the Repository**:
+   ```bash
+   git clone https://github.com/yourusername/tubecatcher.git
+   cd tubecatcher
+   ```
+   Alternatively, download and extract the ZIP file from GitHub.
 
-    Run the application:
+2. **Run the Batch File**:
+   - Double-click `Run.bat` in the `tubecatcher` folder.
+   - The script will:
+     - Check for an internet connection.
+     - Install Python 3.11.3 if not found.
+     - Install FFmpeg if not found and add it to the system PATH.
+     - Install or update `yt-dlp` using pip.
+     - Launch the TubeCatcher GUI.
+   - **Note**: You may need to run `Run.bat` as an administrator to install dependencies successfully. Right-click the file and select "Run as administrator."
 
-        On Windows, simply double-click the Run.bat file. This script will automatically handle the initial setup for you.
+3. **Verify Installation**:
+   - If prompted, allow the script to download and install dependencies.
+   - The GUI should launch automatically after setup.
 
-        On other systems, you will need to manually install Python, FFmpeg, and yt-dlp first. Then, you can run the app directly using Python: python ytdlp6.py.
+### Manual Installation (Windows, macOS, Linux)
+If you prefer manual setup or are using macOS/Linux, follow these steps:
 
-    Enter a URL: Paste the URL of the YouTube video you want to download into the "Video URL" text box.
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/yourusername/tubecatcher.git
+   cd tubecatcher
+   ```
 
-    Fetch Formats: Click the "Fetch Formats" button. This will populate a dropdown menu with all the available download options.
+2. **Install Python Dependencies**:
+   Install `yt-dlp` using pip:
+   ```bash
+   pip install yt-dlp
+   ```
 
-    Select a Format: Choose your desired format from the dropdown. You can also check the "Audio Only" box to filter for audio-only formats.
+3. **Install FFmpeg**:
+   - **Windows**: Download FFmpeg from [ffmpeg.org](https://ffmpeg.org/download.html) or use a package manager like Chocolatey (`choco install ffmpeg`). Add `ffmpeg.exe` to your system PATH.
+   - **macOS**: Install via Homebrew (`brew install ffmpeg`).
+   - **Linux**: Install via your package manager (e.g., `sudo apt install ffmpeg` on Ubuntu/Debian).
 
-    Set Output Folder: Click "Browse" to select where you want to save the downloaded file. By default, it will save to the same folder where the app is located.
+4. **Run the Application**:
+   ```bash
+   python ytdlp5.py
+   ```
 
-    Start Download: Click the "Start Download" button to begin the process. You can monitor the progress in the console log and the progress bar.
+   If you encounter a "yt-dlp not found" error, the application will prompt you to install it automatically. Ensure FFmpeg is installed and accessible in your PATH, or the application will display an error message.
 
-    Stop Download: You can click the "Stop" button at any time to cancel an ongoing download.
+## How to Use
+### Using Run.bat (Windows)
+1. **Double-Click Run.bat**:
+   - Run `Run.bat` from the `tubecatcher` folder (use "Run as administrator" if prompted for permissions).
+   - The script will check and install dependencies, then launch the TubeCatcher GUI.
 
-Dependencies
+2. **Follow GUI Instructions**:
+   - Once the GUI opens, follow the steps below under "Using the GUI."
 
-This application relies on the following open-source tools:
+### Using the GUI
+1. **Launch TubeCatcher**:
+   - On Windows, use `Run.bat` or run `python ytdlp5.py`.
+   - On macOS/Linux, run `python ytdlp5.py` from the terminal.
 
-    Python: A versatile programming language. The Windows batch script will automatically download and install Python 3.11.3 for you if it's not detected.
+2. **Enter a URL**:
+   Paste the URL of the video or audio you want to download (e.g., a YouTube video link) into the "Video URL" field.
 
-    yt-dlp: A powerful command-line program to download videos from YouTube and a variety of other video sites. It is installed automatically by the Python pip package manager if it's not found.
+3. **Fetch Formats**:
+   Click the "Fetch Formats" button to retrieve available formats. The formats will appear in the dropdown menu, including options like "Best Video + Audio" for combined video and audio downloads.
 
-    FFmpeg: A powerful and essential tool for processing multimedia files, required for merging video and audio streams into a single file. The Windows batch script will automatically install FFmpeg for you if it's not detected.
+4. **Select Format**:
+   - Choose a format from the dropdown menu.
+   - Check the "Audio Only" box to filter and download audio-only formats (e.g., MP3, M4A).
+   - If a video-only format is selected, TubeCatcher will automatically pair it with the best audio stream to ensure the output includes both video and audio.
 
-Credits
+5. **Choose Output Folder**:
+   Click the "Browse" button to select a directory for saving downloaded files. The default is the current directory.
 
-This tool would not be possible without the incredible work of the following open-source projects. A huge thank you to:
+6. **Configure Options**:
+   - Check "Subtitles" to download and embed subtitles (if available).
+   - Check "Thumbnail" to download and embed the video thumbnail in the output file.
 
-    yt-dlp: For providing the core functionality that powers this application. Their work is invaluable to the community.
+7. **Start Download**:
+   Click "Start Download" to begin downloading. The progress bar and console will show real-time download status.
 
-    FFmpeg: For their robust and reliable multimedia framework.
+8. **Stop Download**:
+   Click the "Stop" button to cancel an ongoing download.
 
-    The Python community: For the language and its amazing ecosystem, including libraries like tkinter for the GUI.
+9. **View Output**:
+   Once the download completes, a success message will appear, and the file will be saved in the specified output folder.
+
+## Troubleshooting
+- **No Audio in Videos**: Ensure FFmpeg is installed and added to your system PATH. TubeCatcher requires FFmpeg to merge video and audio streams. On Windows, `Run.bat` should handle FFmpeg installation, but verify it’s in your PATH if issues persist.
+- **Formats Not Loading**: Check your internet connection and ensure the URL is valid. Some platforms may require additional configuration in `yt-dlp`.
+- **Errors During Download**: Review the console output in the GUI for detailed error messages. Common issues include missing dependencies or invalid format selections.
+- **Run.bat Issues (Windows)**:
+  - If `Run.bat` fails, ensure you have an active internet connection.
+  - Run the script as an administrator to allow dependency installation.
+  - Check that sufficient disk space is available for downloading and extracting FFmpeg.
+
+## Credits
+- **yt-dlp Community**: TubeCatcher is built on top of the amazing [yt-dlp](https://github.com/yt-dlp/yt-dlp) library, a fork of youtube-dl. A huge thank you to the yt-dlp developers and contributors for their work in creating a robust and versatile tool for downloading online media.
+- **FFmpeg**: Thanks to the FFmpeg team for providing the essential tools for media processing.
+- **Tkinter**: The Python standard library's Tkinter module powers the GUI.
+
+## License
+This project is licensed under the MIT License. See the `LICENSE` file for details.
+
+## Contributing
+Contributions are welcome! Please submit issues or pull requests on the [GitHub repository](https://github.com/yourusername/tubecatcher). Ensure any changes are tested and maintain compatibility with `yt-dlp`.
+
+## Support
+If you find TubeCatcher useful, consider supporting the developer by visiting [Buy Me a Coffee](https://buymeacoffee.com/xuvidhah). Your support helps keep this project alive!
