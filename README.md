@@ -51,6 +51,7 @@ For Windows users, the provided `Run.bat` script automates the installation of d
    - The GUI should launch automatically after setup.
   
 ##Why Not an Executable (.exe)?
+
 TubeCatcher is distributed as a Python script (ytdlp5.py) with a Run.bat script for Windows, rather than a standalone executable (.exe). This design choice was made for the following reasons:
 - Ease of Updating Dependencies: TubeCatcher relies on yt-dlp and FFmpeg, which are frequently updated to support new websites, fix bugs, and adapt to changes in platform APIs (e.g., YouTube). Bundling these dependencies into an .exe file using tools like PyInstaller would make it difficult for users to update yt-dlp and FFmpeg independently. By keeping the application as a Python script, users can easily update yt-dlp with pip install --upgrade yt-dlp or reinstall FFmpeg to ensure compatibility with the latest platforms.
 - Flexibility and Transparency: A Python script allows users to inspect and modify the code if needed, fostering transparency and customization. An .exe file would obscure the code and make it harder for users to troubleshoot or extend functionality. 
