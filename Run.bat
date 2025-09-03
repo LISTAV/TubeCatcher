@@ -50,9 +50,16 @@ if %errorlevel% neq 0 (
     ping 127.0.0.1 -n 1 -w 20 > nul
 )
 
+:: 3️⃣ Update yt-dlp
+echo Updating yt-dlp to the latest version...
+python -m pip install --upgrade yt-dlp
+echo yt-dlp is now up-to-date.
+ping 127.0.0.1 -n 1 -w 20 > nul
+
 :: 4️⃣ Run YTDL GUI and Force Normal Window Size
 echo Starting YTDL GUI...
 cd /d "%~dp0"  :: Ensure we are in the script's directory
 start /b pythonw ytdlp6.py  :: Start the GUI without a console
 powershell -Command "Start-Sleep -Milliseconds 70" >nul 2>&1
 exit
+
