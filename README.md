@@ -145,7 +145,7 @@ If you prefer manual setup or are using macOS/Linux, follow these steps:
 This project is licensed under the MIT License. See the `LICENSE` file for details.
 
 ## Contributing
-Contributions are welcome! Please submit issues or pull requests on the [GitHub repository](https://github.com/yourusername/tubecatcher). Ensure any changes are tested and maintain compatibility with `yt-dlp`.
+Contributions are welcome! Please submit issues or pull requests on the [GitHub repository](https://github.com/LISTAV/tubecatcher). Ensure any changes are tested and maintain compatibility with `yt-dlp`.
 
 ## Support
 If you find TubeCatcher useful, consider supporting the developer by visiting [Buy Me a Coffee](https://buymeacoffee.com/xuvidhah). Your support helps keep this project alive!
