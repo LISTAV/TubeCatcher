@@ -8,6 +8,20 @@ TubeCatcher is a user-friendly graphical user interface (GUI) for downloading vi
 If you find TubeCatcher useful, please consider supporting the developer by buying a coffee! Your support helps keep this project alive and funds future improvements.
 
 [![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-Donate-orange?logo=buymeacoffee)](https://buymeacoffee.com/xuvidhah)
+🛠️ Looking for MacOS Script Contribution
+
+Hi everyone! My project currently includes a `Run.bat` script for Windows users to easily execute the setup or launch process. I’d love to make this more accessible for MacOS users too.
+
+If you're familiar with shell scripting on MacOS, I’d really appreciate a contribution that replicates the functionality of Run.bat in a .sh script (or similar). Ideally, it should:
+
+    Be compatible with macOS Terminal
+
+    Handle any dependencies or environment setup
+
+    Mirror the logic of the Windows script as closely as possible
+
+Feel free to fork the repo and submit a pull request, or drop suggestions in the comments. Thanks in advance for helping make this project more cross-platform friendly! 🍎💻
+
 
 ## Features
 - **Fetch Available Formats**: Retrieve and display all available video and audio formats for a given URL.
